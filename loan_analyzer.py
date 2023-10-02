@@ -12,21 +12,28 @@ First, let's start with some calculations on a list of prices for 5 loans.
     3. Using the sum of all loans and the total number of loans, calculate the average loan price.
     4. Print all calculations with descriptive messages.
 """
-loan_costs = [500, 600, 200, 1000, 450]
+LC = loan_costs = [500, 600, 200, 1000, 450] # `LC` short for 'loan costs' which is given as a list of values
+# LC is data <class 'list'>
 
 # How many loans are in the list?
-NL = number_of_loans = len(loan_costs) # 
+NL = number_of_loans = len(loan_costs) # `NL` short for 'number of loans'
+# used `len` function to count the list of loans, assigned value to a variable, and set that equal to a constant
+# NL is data <class 'int'>
 
 # What is the total of all loans?
-TLV = total_value_of_loans = sum(loan_costs)
+TLV = total_value_of_loans = sum(loan_costs) # `TLV` short for 'total value of all loans'
+# used `sum` function to add up all loans in the list, assigned value to a variable, and set that equal to a constant
+# TLV is data <class 'int'>
 
-# What is the average loan amount from the list?
-ALV = average_loan_amount = total_value_of_loans / number_of_loans
+# What is the average loan amount from the list? # `ALV` short for 'average loan value'
+ALV = average_loan_amount = TLV / NL
+# used 'the division operator' forward slash (/), a built-in arithmetic operation in Python to calculate average, and set that equal to a constant
+# ALV is data <class 'float'>
 
-print(f"The list is composed of {NL} loans with a total value of ${TLV}average loan amount is: ${ALV:.2f}")
+print(f"The list is composed of {NL} loans with a total value of ${TLV:.2f} average loan amount is: ${ALV:.2f}")
+# used `print(f)` function to output all 3 calculations in a statement that calls each of the constants defined by preceeding calculations
 
-"""Part 2: Analyze Loan Data.
-
+"""Part 2: Analyze Loan Data.+
 Analyze the loan to determine the investment evaluation.
 
 Using more detailed data on one of these loans, follow these steps to calculate a Present Value, or a "fair price" for what this loan would be worth.
